@@ -25,6 +25,37 @@ h1 {
   color: #475569;
 }
 
+.upload-form {
+  margin-top: 18px;
+  padding: 14px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 14px;
+  background: #f8fafc;
+}
+
+.upload-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.file-input {
+  flex: 1;
+  min-width: 220px;
+}
+
+.upload-form button,
+.secondary-button {
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0 18px;
+  min-height: 44px;
+  cursor: pointer;
+}
+
 .ask-form {
   margin-top: 18px;
   display: flex;
@@ -46,12 +77,41 @@ h1 {
   color: #ffffff;
   font-weight: 600;
   padding: 0 18px;
+  min-height: 44px;
   cursor: pointer;
 }
 
 .ask-form button:disabled {
   background: #94a3b8;
   cursor: not-allowed;
+}
+
+.upload-form button {
+  background: #1d4ed8;
+}
+
+.upload-form button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.secondary-button {
+  background: #334155;
+}
+
+.current-source,
+.file-name,
+.upload-message {
+  margin-top: 10px;
+}
+
+.current-source {
+  font-weight: 600;
+}
+
+.upload-message {
+  color: #0f766e;
+  font-weight: 600;
 }
 
 .loading {
@@ -96,11 +156,15 @@ h1 {
     padding: 16px;
   }
 
+  .upload-row,
   .ask-form {
     flex-direction: column;
   }
 
+  .upload-form button,
+  .secondary-button,
   .ask-form button {
     min-height: 44px;
+    width: 100%;
   }
 }
